@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  min-height: 100vh;
+}
+
+h1 {
+  background-color: rgba(8, 27, 49, 0.8);
+  height: 5rem;
+  line-height: 5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#match-status {
+  margin-top: 1.5rem;
+  color: #94a3b8;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.choice {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: all 0.3s ease; /* Smooth animation setup */
+}
+
+.choice img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Bounce animation on hover */
+.choice:hover:not(.disabled) {
+  cursor: pointer;
+  background-color: #38bdf8;
+  transform: translateY(-10px); /* Bounces up slightly */
+}
+
+.choice.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.scoreboard {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.5rem;
+  gap: 5rem;
+}
+
+#userScore,
+#compScore {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.msgContainer {
+  margin-top: 4rem;
+  height: 4rem;
+}
+
+.msg {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #fff;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Play Again Button Styling */
+#reset-btn {
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #38bdf8;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+}
+
+#reset-btn:hover {
+  background-color: #0284c7;
+  transform: scale(1.05);
+}
+
+.hide {
+  display: none !important;
+}
